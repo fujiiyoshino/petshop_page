@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FUJII DOGsオンラインショップ。手作りごはん、おやつ、グッズをお届けします。獣医師監修の安心フード。">
+    <title>ONLINE SHOP | FUJII DOGs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .shop-category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .shop-section {
+            margin-bottom: 4rem;
+        }
+
+        .shop-section-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .shop-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--color-main);
+        }
+
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .product-detail-image img {
+            width: 100%;
+            border-radius: var(--radius-sm);
+        }
+
+        .product-detail-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-detail-category {
+            color: var(--color-main);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        .product-detail-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin: 1rem 0;
+        }
+
+        .product-detail-description {
+            color: var(--color-text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            background: var(--color-base);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .product-features li {
+            padding: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            color: var(--color-main);
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="puppies.html" class="nav-link">PUPPIES</a></li>
+                <li><a href="services.html" class="nav-link">SERVICES</a></li>
+                <li><a href="shop.html" class="nav-link">ONLINE SHOP</a></li>
+                <li><a href="contact.html" class="nav-link">ACCESS & CONTACT</a></li>
+            </ul>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html" class="mobile-menu-link">ABOUT</a></li>
+            <li><a href="puppies.html" class="mobile-menu-link">PUPPIES</a></li>
+            <li><a href="services.html" class="mobile-menu-link">SERVICES</a></li>
+            <li><a href="shop.html" class="mobile-menu-link">ONLINE SHOP</a></li>
+            <li><a href="contact.html" class="mobile-menu-link">ACCESS & CONTACT</a></li>
+        </ul>
+    </div>
+
+    <section class="hero" style="height: 50vh; min-height: 300px;">
+        <div class="hero-bg">
+            <img src="images/product_01.jpg" alt="オンラインショップ">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ONLINE SHOP</h1>
+        </div>
+    </section>
+
+    <section class="puppies">
+        <div class="container">
+            <p class="puppies-intro fade-in">
+                FUJII DOGsがお届けする、愛情たっぷりの手作りごはんとこだわりのグッズ。<br>
+                すべて獣医師監修のもと、安心・安全な商品をセレクトしています。
+            </p>
+
+            <div class="shop-category-nav fade-in">
+                <a href="#food" class="btn btn-secondary">冷凍ごはん</a>
+                <a href="#treats" class="btn btn-secondary">おやつ</a>
+                <a href="#goods" class="btn btn-secondary">グッズ</a>
+                <a href="#care" class="btn btn-secondary">ケア用品</a>
+            </div>
+
+            <!-- Food Section -->
+            <div class="shop-section" id="food">
+                <h2 class="shop-section-title fade-in">🍖 冷凍手作りごはん</h2>
+
+                <div class="product-detail fade-in">
+                    <div class="product-detail-image">
+                        <img src="images/product_01.jpg" alt="鹿肉と季節野菜のヘルシーごはん">
+                    </div>
+                    <div class="product-detail-info">
+                        <span class="product-detail-category">冷凍ごはん</span>
+                        <h3>鹿肉と季節野菜のヘルシーごはん</h3>
+                        <p class="product-detail-price">¥1,280〜</p>
+                        <p class="product-detail-description">
+                            三重県産の新鮮な鹿肉と、旬の野菜をたっぷり使用。高タンパク・低脂肪で、ダイエット中のワンちゃんにもおすすめです。合成添加物・保存料は一切使用していません。
+                        </p>
+                        <ul class="product-features">
+                            <li>獣医師監修レシピ</li>
+                            <li>国産食材100%使用</li>
+                            <li>合成添加物・保存料不使用</li>
+                            <li>冷凍配送で鮮度をキープ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-detail fade-in">
+                    <div class="product-detail-image">
+                        <img src="images/salmon_gohan.png" alt="サーモンと季節野菜のヘルシーごはん">
+                    </div>
+                    <div class="product-detail-info">
+                        <span class="product-detail-category">冷凍ごはん</span>
+                        <h3>サーモンと季節野菜のヘルシーごはん</h3>
+                        <p class="product-detail-price">¥1,380〜</p>
+                        <p class="product-detail-description">
+                            北海道産の新鮮なサーモンと、旬の野菜をたっぷり使用。オメガ3脂肪酸が豊富で、皮膚・被毛の健康をサポート。アレルギーが気になるワンちゃんにもおすすめです。
+                        </p>
+                        <ul class="product-features">
+                            <li>獣医師監修レシピ</li>
+                            <li>オメガ3脂肪酸豊富</li>
+                            <li>皮膚・被毛の健康サポート</li>
+                            <li>冷凍配送で鮮度をキープ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-detail fade-in">
+                    <div class="product-detail-image">
+                        <img src="images/horse_gohan.png" alt="馬肉と季節野菜のヘルシーごはん">
+                    </div>
+                    <div class="product-detail-info">
+                        <span class="product-detail-category">冷凍ごはん</span>
+                        <h3>馬肉と季節野菜のヘルシーごはん</h3>
+                        <p class="product-detail-price">¥1,480〜</p>
+                        <p class="product-detail-description">
+                            熊本県産の新鮮な馬肉と、旬の野菜を使用。高タンパク・低カロリー・低アレルゲンで、食物アレルギーのあるワンちゃんにも安心。鉄分も豊富です。
+                        </p>
+                        <ul class="product-features">
+                            <li>獣医師監修レシピ</li>
+                            <li>低アレルゲン食材</li>
+                            <li>高タンパク・低カロリー</li>
+                            <li>冷凍配送で鮮度をキープ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Treats Section -->
+            <div class="shop-section" id="treats">
+                <h2 class="shop-section-title fade-in">🦴 おやつ</h2>
+
+                <div class="shop-grid">
+                    <div class="shop-item fade-in">
+                        <div class="shop-item-image">
+                            <img src="images/treat_sasami.png" alt="国産ささみジャーキー">
+                        </div>
+                        <div class="shop-item-info">
+                            <span class="shop-item-category">おやつ</span>
+                            <h3>国産ささみの無添加ジャーキー</h3>
+                            <span class="shop-item-price">¥580</span>
+                        </div>
+                    </div>
+
+                    <div class="shop-item fade-in">
+                        <div class="shop-item-image">
+                            <img src="images/treat_sweetpotato.png" alt="さつまいもスティック">
+                        </div>
+                        <div class="shop-item-info">
+                            <span class="shop-item-category">おやつ</span>
+                            <h3>さつまいもスティック</h3>
+                            <span class="shop-item-price">¥480</span>
+                        </div>
+                    </div>
+
+                    <div class="shop-item fade-in">
+                        <div class="shop-item-image">
+                            <img src="images/treat_venison.png" alt="鹿肉ビッツ">
+                        </div>
+                        <div class="shop-item-info">
+                            <span class="shop-item-category">おやつ</span>
+                            <h3>鹿肉ビッツ トレーニング用</h3>
+                            <span class="shop-item-price">¥680</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goods Section -->
+            <div class="shop-section" id="goods">
+                <h2 class="shop-section-title fade-in">🎀 グッズ</h2>
+
+                <div class="shop-grid">
+                    <div class="shop-item fade-in">
+                        <div class="shop-item-image">
+                            <img src="images/product_03.jpg" alt="首輪とリードセット">
+                        </div>
+                        <div class="shop-item-info">
+                            <span class="shop-item-category">グッズ</span>
+                            <h3>オーガニックコットン<br>首輪 & リードセット</h3>
+                            <span class="shop-item-price">¥3,800</span>
+                        </div>
+                    </div>
+
+                    <div class="shop-item fade-in">
+                        <div class="shop-item-image">
+                            <img src="images/food_bowl_ceramic.png" alt="陶器製フードボウル"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+                                style="object-fit: contain;">
+                        </div>
+                        <div class="shop-item-info">
+                            <span class="shop-item-category">グッズ</span>
+                            <h3>陶器製フードボウル<br>FUJII DOGs オリジナル</h3>
+                            <span class="shop-item-price">¥2,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Care Section -->
+            <div class="shop-section" id="care">
+                <h2 class="shop-section-title fade-in">🧴 ケア用品</h2>
+
+                <div class="product-detail fade-in">
+                    <div class="product-detail-image">
+                        <img src="images/product_04.jpg" alt="ナチュラルシャンプー">
+                    </div>
+                    <div class="product-detail-info">
+                        <span class="product-detail-category">ケア用品</span>
+                        <h3>天然由来成分100% ナチュラルシャンプー</h3>
+                        <p class="product-detail-price">¥2,200</p>
+                        <p class="product-detail-description">
+                            ラベンダーとカモミールの優しい香り。敏感肌のワンちゃんにも安心してお使いいただけます。当店のトリミングサロンでも使用している、プロ仕様のシャンプーです。
+                        </p>
+                        <ul class="product-features">
+                            <li>天然由来成分100%</li>
+                            <li>パラベン・シリコンフリー</li>
+                            <li>敏感肌・アレルギー対応</li>
+                            <li>ラベンダー&カモミールの香り</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title fade-in">ご注文について</h2>
+            <p class="fade-in" style="margin-bottom: 2rem; color: var(--color-text-light);">
+                商品のご注文は、お電話・お問合せフォーム・InstagramのDM・店頭にて承っております。<br>
+                送料は全国一律¥800（¥5,000以上で送料無料）
+            </p>
+            <div class="fade-in">
+                <a href="contact.html" class="btn btn-primary">ご注文・お問い合わせ →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+                    <p>三重県の犬専用ペットショップ。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="puppies.html">PUPPIES</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="shop.html">ONLINE SHOP</a></li>
+                        <li><a href="contact.html">ACCESS & CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <img src="images/icon_instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FUJII DOGs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="shop-banner">
+        <a href="order.html" class="shop-banner-link">
+            <span class="shop-banner-icon">🛒</span>
+            <span>ご注文はこちら</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

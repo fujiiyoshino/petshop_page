@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FUJII DOGsへのお問い合わせ。お電話、LINE、フォームからお気軽にご連絡ください。">
+    <title>ACCESS & CONTACT | FUJII DOGs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form-section {
+            background: var(--color-white);
+            padding: 4rem 0;
+        }
+
+        .contact-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--color-base);
+            padding: 3rem;
+            border-radius: var(--radius-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .form-label .required {
+            color: var(--color-accent);
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--color-base-alt);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            background: var(--color-white);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-main);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--color-main);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+
+        .form-submit:hover {
+            background: var(--color-main-dark);
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-top: 0.5rem;
+        }
+
+        .contact-info-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info-card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-info-card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-main-light), var(--color-main));
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-card p {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .contact-info-card .highlight {
+            color: var(--color-accent);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Access Section Styles */
+        .access-section {
+            background: var(--color-white);
+            padding: 5rem 0;
+        }
+
+        .access-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: start;
+        }
+
+        .access-info {
+            padding: var(--spacing-md);
+        }
+
+        .access-item {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--color-base-alt);
+        }
+
+        .access-item:last-child {
+            border-bottom: none;
+        }
+
+        .access-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-base);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.25rem;
+        }
+
+        .access-item-content h4 {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-main);
+            letter-spacing: 0.1em;
+            margin-bottom: 4px;
+        }
+
+        .access-item-content p {
+            color: var(--color-text);
+        }
+
+        .access-item-content a {
+            color: var(--color-accent);
+        }
+
+        .access-map {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 400px;
+        }
+
+        .access-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 900px) {
+            .access-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-info-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="puppies.html" class="nav-link">PUPPIES</a></li>
+                <li><a href="services.html" class="nav-link">SERVICES</a></li>
+                <li><a href="shop.html" class="nav-link">ONLINE SHOP</a></li>
+                <li><a href="contact.html" class="nav-link">ACCESS & CONTACT</a></li>
+            </ul>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html" class="mobile-menu-link">ABOUT</a></li>
+            <li><a href="puppies.html" class="mobile-menu-link">PUPPIES</a></li>
+            <li><a href="services.html" class="mobile-menu-link">SERVICES</a></li>
+            <li><a href="shop.html" class="mobile-menu-link">ONLINE SHOP</a></li>
+            <li><a href="contact.html" class="mobile-menu-link">ACCESS & CONTACT</a></li>
+        </ul>
+    </div>
+
+    <section class="hero" style="height: 40vh; min-height: 250px;">
+        <div class="hero-bg">
+            <img src="image_01.png" alt="ACCESS & CONTACT">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ACCESS & CONTACT</h1>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section class="access-section" id="access">
+        <div class="container">
+            <h2 class="section-title fade-in">ACCESS</h2>
+            <p class="section-subtitle fade-in">店舗のご案内</p>
+
+            <div class="access-inner" style="margin-top: 3rem;">
+                <div class="access-info fade-in">
+                    <div class="access-item">
+                        <div class="access-icon">📍</div>
+                        <div class="access-item-content">
+                            <h4>ADDRESS</h4>
+                            <p>〒510-0000<br>三重県四日市市⚪︎⚪︎ 1-2-3</p>
+                        </div>
+                    </div>
+
+                    <div class="access-item">
+                        <div class="access-icon">🕒</div>
+                        <div class="access-item-content">
+                            <h4>OPEN HOURS</h4>
+                            <p>10:00 〜 19:00<br>定休日：毎週水曜日・年末年始</p>
+                        </div>
+                    </div>
+
+                    <div class="access-item">
+                        <div class="access-icon">📞</div>
+                        <div class="access-item-content">
+                            <h4>TEL / FAX</h4>
+                            <p>059-1111-1111</p>
+                        </div>
+                    </div>
+
+                    <div class="access-item">
+                        <div class="access-icon">🚗</div>
+                        <div class="access-item-content">
+                            <h4>PARKING</h4>
+                            <p>店舗前に3台分のお客様専用駐車場がございます。</p>
+                        </div>
+                    </div>
+
+                    <div class="access-item">
+                        <div class="access-icon">🚃</div>
+                        <div class="access-item-content">
+                            <h4>TRAIN</h4>
+                            <p>近鉄名古屋線「⚪︎⚪︎駅」徒歩5分</p>
+                        </div>
+                    </div>
+
+                    <div class="access-item">
+                        <div class="access-icon">🌱</div>
+                        <div class="access-item-content">
+                            <h4>ANIMAL HANDLING</h4>
+                            <p>第一種動物取扱業登録番号：第123456号<br>登録種別：販売・保管・貸出・訓練・展示</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="access-map fade-in">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105272.76635390715!2d136.56637319760742!3d34.966763523455794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60038e65306660e1%3A0x62c95786419736c4!2z5LiJ6YeN55yM5Zub5pel5biC5biC!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container" id="contact-form">
+            <h2 class="section-title fade-in">CONTACT</h2>
+            <p class="section-subtitle fade-in">お問い合わせ</p>
+
+            <div class="contact-info-cards" style="margin-top: 2rem;">
+                <div class="contact-info-card fade-in">
+                    <div class="contact-info-card-icon">📞</div>
+                    <h3>お電話</h3>
+                    <p>営業時間 10:00〜19:00</p>
+                    <p class="highlight">059-1111-1111</p>
+                </div>
+
+                <div class="contact-info-card fade-in">
+                    <div class="contact-info-card-icon">💬</div>
+                    <h3>Instagram DM</h3>
+                    <p>24時間メッセージ受付</p>
+                    <p class="highlight">@fujii_dogs_111</p>
+                </div>
+
+                <div class="contact-info-card fade-in">
+                    <div class="contact-info-card-icon">✉️</div>
+                    <h3>お問い合わせフォーム</h3>
+                    <p>24時間受付</p>
+                    <p class="highlight">下記フォームより</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title fade-in">お問い合わせフォーム</h2>
+            <p class="section-subtitle fade-in">内容を確認後、2営業日以内にご返信いたします</p>
+
+            <div class="contact-form-container fade-in" style="margin-top: 2rem;">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label class="form-label">
+                            お名前<span class="required">必須</span>
+                        </label>
+                        <input type="text" class="form-input" name="name" required placeholder="山田 太郎">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            メールアドレス<span class="required">必須</span>
+                        </label>
+                        <input type="email" class="form-input" name="email" required placeholder="example@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            電話番号
+                        </label>
+                        <input type="tel" class="form-input" name="phone" placeholder="090-1234-5678">
+                        <p class="form-note">※ 折り返しお電話をご希望の場合はご記入ください</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            お問い合わせ内容<span class="required">必須</span>
+                        </label>
+                        <select class="form-select" name="category" required>
+                            <option value="">選択してください</option>
+                            <option value="puppy">子犬について</option>
+                            <option value="trimming">トリミング予約</option>
+                            <option value="hotel">ドッグホテル予約</option>
+                            <option value="dogrun">ドッグラン利用</option>
+                            <option value="school">しつけ教室</option>
+                            <option value="shop">オンラインショップ</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            メッセージ<span class="required">必須</span>
+                        </label>
+                        <textarea class="form-textarea" name="message" required
+                            placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+                    <p>三重県の犬専用ペットショップ。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="puppies.html">PUPPIES</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="shop.html">ONLINE SHOP</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <img src="images/icon_instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FUJII DOGs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

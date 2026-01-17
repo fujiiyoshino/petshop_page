@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FUJII DOGs オンラインショップのご注文フォーム。">
+    <title>ORDER FORM | FUJII DOGs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .order-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--color-base);
+            padding: 3rem;
+            border-radius: var(--radius-md);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--color-main-dark);
+            border-bottom: 2px solid var(--color-white);
+            padding-bottom: 0.5rem;
+        }
+
+        .product-select-group {
+            background: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            border: 1px solid var(--color-base-alt);
+        }
+
+        .product-select-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .product-select-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .shop-banner {
+            display: none !important;
+            /* Hide the fixed banner on the order page */
+        }
+
+        @media (max-width: 600px) {
+            .product-select-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="puppies.html" class="nav-link">PUPPIES</a></li>
+                <li><a href="services.html" class="nav-link">SERVICES</a></li>
+                <li><a href="shop.html" class="nav-link">ONLINE SHOP</a></li>
+                <li><a href="contact.html" class="nav-link">ACCESS & CONTACT</a></li>
+            </ul>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html" class="mobile-menu-link">ABOUT</a></li>
+            <li><a href="puppies.html" class="mobile-menu-link">PUPPIES</a></li>
+            <li><a href="services.html" class="mobile-menu-link">SERVICES</a></li>
+            <li><a href="shop.html" class="mobile-menu-link">ONLINE SHOP</a></li>
+            <li><a href="contact.html" class="mobile-menu-link">ACCESS & CONTACT</a></li>
+        </ul>
+    </div>
+
+    <section class="hero" style="height: 30vh; min-height: 200px;">
+        <div class="hero-bg">
+            <img src="images/product_01.jpg" alt="ご注文">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ORDER FORM</h1>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">ご注文フォーム</h2>
+            <p class="section-subtitle fade-in">下記フォームよりご注文内容を入力してください。<br>確認後、担当者よりご連絡いたします。</p>
+
+            <div class="order-form-container fade-in"
+                style="margin-top: 3rem; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <form action="#" method="post">
+                    <div class="form-section">
+                        <h3 class="form-section-title">ご注文商品</h3>
+                        <div id="product-list">
+                            <!-- Product Row Template (Initial) -->
+                            <div class="product-input-group product-item">
+                                <div class="product-row">
+                                    <label class="field-label">商品 <span class="product-number">1</span> <span
+                                            class="badge-required">必須</span></label>
+                                    <div class="select-wrapper">
+                                        <select name="product[]" class="form-select" required>
+                                            <option value="">選択してください</option>
+                                            <optgroup label="手作りごはん">
+                                                <option value="venison_rice">鹿肉と季節野菜のヘルシーごはん</option>
+                                                <option value="salmon_rice">サーモンと彩り野菜のヘルシーごはん</option>
+                                                <option value="horse_rice">馬肉と季節野菜のヘルシーごはん</option>
+                                            </optgroup>
+                                            <optgroup label="おやつ">
+                                                <option value="sasami_jerky">国産ささみの無添加ジャーキー</option>
+                                                <option value="sweet_potato">さつまいもスティック</option>
+                                                <option value="venison_bits">鹿肉ビッツ トレーニング用</option>
+                                            </optgroup>
+                                            <optgroup label="グッズ">
+                                                <option value="collar_leash">オリジナル首輪＆リードセット</option>
+                                                <option value="food_bowl">名入れ可能 陶器製フードボウル</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="quantity-wrapper">
+                                        <label class="field-label-sm">個数</label>
+                                        <select name="quantity[]" class="form-select-sm">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn-remove-product" aria-label="削除">×</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" id="add-product-btn" class="btn-add-product">
+                            <span>＋</span> 商品を追加する
+                        </button>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-section-title">お客様情報</h3>
+
+                        <div class="form-group">
+                            <label for="name" class="form-label">お名前 <span class="badge-required">必須</span></label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="例：藤井 太郎" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">メールアドレス <span class="badge-required">必須</span></label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="例：taro@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">電話番号 <span class="badge-required">必須</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="例：090-1234-5678"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" class="form-label">ご住所 <span class="badge-required">必須</span></label>
+                            <input type="text" id="address" name="address" class="form-input"
+                                placeholder="〒000-0000 ◯◯県◯◯市..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="breed" class="form-label">犬種 <span class="badge-optional">任意</span></label>
+                            <input type="text" id="breed" name="breed" class="form-input" placeholder="例：トイプードル">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">備考・ご要望 <span
+                                    class="badge-optional">任意</span></label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="配達日時指定や名入れのご希望（アルファベット）などがあればご記入ください。"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="form-submit-btn">注文内容を確認する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    FUJII <span>DOGs</span>
+                </div>
+                <div class="footer-nav">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="puppies.html">PUPPIES</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="shop.html">ONLINE SHOP</a></li>
+                        <li><a href="contact.html">ACCESS & CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-icon" aria-label="LINE">LN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FUJII DOGs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

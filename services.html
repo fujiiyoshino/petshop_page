@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FUJII DOGsのサービス。トリミング、ドッグホテル、ドッグラン、しつけ教室をご紹介します。三重県のペットショップ。">
+    <title>SERVICES | FUJII DOGs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--color-base-alt);
+            scroll-margin-top: 200px;
+            /* Header + Sub-nav offset */
+        }
+
+        .service-detail:last-child {
+            border-bottom: none;
+        }
+
+        .service-detail:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-detail:nth-child(even)>* {
+            direction: ltr;
+        }
+
+        .service-detail-image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .service-detail-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-main);
+        }
+
+        .service-detail-content p {
+            margin-bottom: 1rem;
+        }
+
+        .price-table {
+            margin-top: 1.5rem;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-base);
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-value {
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+
+            .service-detail,
+            .service-detail:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="puppies.html" class="nav-link">PUPPIES</a></li>
+                <li><a href="services.html" class="nav-link">SERVICES</a></li>
+                <li><a href="shop.html" class="nav-link">ONLINE SHOP</a></li>
+                <li><a href="contact.html" class="nav-link">ACCESS & CONTACT</a></li>
+            </ul>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="about.html" class="mobile-menu-link">ABOUT</a></li>
+            <li><a href="puppies.html" class="mobile-menu-link">PUPPIES</a></li>
+            <li><a href="services.html" class="mobile-menu-link">SERVICES</a></li>
+            <li><a href="shop.html" class="mobile-menu-link">ONLINE SHOP</a></li>
+            <li><a href="contact.html" class="mobile-menu-link">ACCESS & CONTACT</a></li>
+        </ul>
+    </div>
+
+    <section class="hero" style="height: 50vh; min-height: 300px;">
+        <div class="hero-bg">
+            <img src="image_06.png" alt="サービス">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">SERVICES</h1>
+        </div>
+    </section>
+
+    <!-- Service Navigation -->
+    <nav
+        style="background: var(--color-white); padding: 1.5rem 0; position: sticky; top: 60px; z-index: 100; box-shadow: var(--shadow-sm);">
+        <div class="container" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            <a href="#trimming" class="btn btn-secondary">トリミング</a>
+            <a href="#hotel" class="btn btn-secondary">ドッグホテル</a>
+            <a href="#dogrun" class="btn btn-secondary">ドッグラン</a>
+            <a href="#school" class="btn btn-secondary">しつけ教室</a>
+        </div>
+    </nav>
+
+    <section class="puppies">
+        <div class="container">
+            <!-- Trimming -->
+            <div class="service-detail fade-in" id="trimming">
+                <div class="service-detail-image">
+                    <img src="images/service_trimming_natural_1768646405052.png" alt="トリミングサロン">
+                </div>
+                <div class="service-detail-content">
+                    <h3>✂️ トリミングサロン</h3>
+                    <p>経験豊富なJKC公認トリマーが、ワンちゃんの個性を活かしたカットをご提案。皮膚に優しいオーガニックシャンプーを使用し、デリケートな肌にも配慮しています。</p>
+                    <p>初めてのトリミングも丁寧に対応いたしますので、パピーちゃんも安心してお任せください。</p>
+                    <div class="price-table">
+                        <h4 style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">料金目安</h4>
+                        <div class="price-row"><span>シャンプーコース（小型犬）</span><span class="price-value">¥4,000〜</span></div>
+                        <div class="price-row"><span>カットコース（小型犬）</span><span class="price-value">¥6,000〜</span></div>
+                        <div class="price-row"><span>カットコース（中型犬）</span><span class="price-value">¥8,000〜</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel -->
+            <div class="service-detail fade-in" id="hotel">
+                <div class="service-detail-image">
+                    <img src="images/service_hotel_natural_1768646420681.png" alt="ドッグホテル">
+                </div>
+                <div class="service-detail-content">
+                    <h3>🏨 ドッグホテル</h3>
+                    <p>お家のような温かい環境で、大切なワンちゃんをお預かりします。ケージレスの広々としたスペースで、ストレスなくお過ごしいただけます。</p>
+                    <p>24時間スタッフが常駐し、お食事・お散歩・健康チェックまで丁寧にケア。ご旅行や急な用事の際も安心です。</p>
+                    <div class="price-table">
+                        <h4 style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">料金目安（1泊）
+                        </h4>
+                        <div class="price-row"><span>小型犬</span><span class="price-value">¥4,500</span></div>
+                        <div class="price-row"><span>中型犬</span><span class="price-value">¥5,500</span></div>
+                        <div class="price-row"><span>大型犬</span><span class="price-value">¥6,500</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dog Run -->
+            <div class="service-detail fade-in" id="dogrun">
+                <div class="service-detail-image">
+                    <img src="images/service_dogrun_natural_1768646434498.png" alt="ドッグラン">
+                </div>
+                <div class="service-detail-content">
+                    <h3>🌳 ドッグラン</h3>
+                    <p>緑豊かな専用ドッグランで、ワンちゃんが思いっきり走り回れます。天然芝の広々としたスペースで、ノーリードで自由に遊べます。</p>
+                    <p>小型犬エリアと大型犬エリアを分けており、サイズの違う子同士のトラブルを防止。水飲み場やベンチも完備しています。</p>
+                    <div class="price-table">
+                        <h4 style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">利用料金</h4>
+                        <div class="price-row"><span>1日利用（1頭）</span><span class="price-value">¥500</span></div>
+                        <div class="price-row"><span>月額パス</span><span class="price-value">¥3,000</span></div>
+                        <div class="price-row"><span>当店でお迎えの方</span><span class="price-value">永久無料</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- School -->
+            <div class="service-detail fade-in" id="school">
+                <div class="service-detail-image">
+                    <img src="images/service_school_natural_1768646449054.png" alt="しつけ教室">
+                </div>
+                <div class="service-detail-content">
+                    <h3>📚 しつけ教室</h3>
+                    <p>CPDT-KA資格を持つプロのドッグトレーナーが、科学的で優しいトレーニング方法をお教えします。叱らない、犬にも飼い主さんにも優しいしつけです。</p>
+                    <p>基本的なコマンドから問題行動の改善まで、ワンちゃんとの絆を深めながら楽しく学べます。</p>
+                    <div class="price-table">
+                        <h4 style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">レッスン料金
+                        </h4>
+                        <div class="price-row"><span>パピークラス（60分）</span><span class="price-value">¥4,000</span></div>
+                        <div class="price-row"><span>基本コース（60分）</span><span class="price-value">¥5,000</span></div>
+                        <div class="price-row"><span>プライベートレッスン</span><span class="price-value">¥8,000</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title fade-in">ご予約・お問い合わせ</h2>
+            <p class="fade-in" style="margin-bottom: 2rem; color: var(--color-text-light);">
+                各サービスのご予約は、お電話またはLINEで承っております。<br>
+                お気軽にお問い合わせください。
+            </p>
+            <div class="fade-in">
+                <a href="contact.html" class="btn btn-primary">お問い合わせはこちら →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">FUJII <span>DOGs</span></a>
+                    <p>三重県の犬専用ペットショップ。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="puppies.html">PUPPIES</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="shop.html">ONLINE SHOP</a></li>
+                        <li><a href="contact.html">ACCESS & CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <img src="images/icon_instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FUJII DOGs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
