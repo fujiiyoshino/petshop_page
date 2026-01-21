@@ -1102,7 +1102,7 @@ a.service-card {
   }
 
   .container {
-    padding: 0 var(--spacing-sm);
+    padding: 0 var(--spacing-md);
   }
 
   .hero {
@@ -1520,10 +1520,33 @@ a.service-card {
   border: 2px solid var(--color-white);
 }
 
+/* お迎えの流れ 画像スタイル（統一） */
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.flow-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+  border: 3px solid var(--color-main-light);
+}
+
 /* スマホ表示時の調整 */
 @media (max-width: 768px) {
   .flow-steps {
     margin-top: 3rem !important;
     /* バッジ分のマージン確保 */
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
   }
 }
