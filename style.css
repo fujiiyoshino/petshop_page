@@ -959,6 +959,17 @@ a.service-card {
   color: var(--color-white);
 }
 
+/* Shop section - white outline button on dark background */
+.shop .btn-secondary {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.shop .btn-secondary:hover {
+  background: var(--color-white);
+  color: var(--color-main);
+}
+
 .btn-accent {
   background: var(--color-accent);
   color: var(--color-white);
